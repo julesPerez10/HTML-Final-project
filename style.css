@@ -1,0 +1,124 @@
+/* Importing Roboto font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Reset de estilos y estilos generales */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+}
+
+/* Barra de navegación */
+.main-nav {
+    background-color: #202020; /* Color de fondo de la barra de navegación */
+    color: white; /* Color de texto en la barra de navegación */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+}
+
+.main-nav .logo img {
+    height: 80px; /* Ajusta la altura del logo según sea necesario */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+}
+
+.nav-links li {
+    margin-right: 30px; /* Aumenta el espaciado entre elementos de la lista */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white; /* Color de texto predeterminado para los enlaces */
+    transition: color 0.3s; /* Transición de color de texto al pasar el ratón */
+}
+
+.nav-links a:hover {
+    color: #00b7ff; /* Color de texto al pasar el ratón */
+    transform: scale(1.1);
+}
+
+/* Estilos adicionales para pantallas pequeñas (menos de 600px) */
+@media only screen and (max-width: 600px) {
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        margin-top: 10px; /* Ajusta el margen según sea necesario */
+    }
+
+    .nav-links li {
+        margin-right: 0; /* Elimina el margen entre elementos de la lista */
+        margin-bottom: 8px; /* Agrega un espacio entre elementos en pantallas pequeñas */
+        white-space: normal; /* Cambia a "normal" para permitir el salto de línea */
+    }
+
+    /* Separar las palabras en la barra de navegación */
+    .nav-links a {
+        padding: 10px; /* Ajusta el relleno según sea necesario */
+        display: block; /* Hace que cada enlace ocupe el ancho completo */
+    }
+
+    /* Container styles for product items on small screens */
+    .product-container,
+    .product-container2 {
+        flex-direction: row; /* Display products in a row on small screens */
+    }
+
+    /* Individual product styles on small screens */
+    .product {
+        width: calc(50% - 20px); /* Adjust the width for two products per row with spacing */
+    }
+}
+
+/* Productos */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+.container{
+    width: 75%;
+    max-width: 1000px;
+    min-width: 320px;
+    margin: auto;
+}
+img{
+    width: 100%;
+}
+
+/* Container styles for product items */
+.product-container,
+.product-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Individual product styles */
+.product {
+    width: calc(33.33% - 20px); /* Calculate the width to have three products per row with spacing between them */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd; /* Add a border to create a card */
+    padding: 15px; /* Add internal space to separate the content from the border */
+    border-radius: 8px; /* Rounded corners for a smoother appearance */
+    background-color: #f5f0f0; /* White background for each card */
+    transition: transform 0.3s ease-in-out; /* Transition effect on hover */
+}
+
+.product:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+}
+
+/* ... (additional code) ... */
